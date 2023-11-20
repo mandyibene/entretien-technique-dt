@@ -11,3 +11,159 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav {
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: row;
+}
+
+nav a {
+  color: white;
+  background: black;
+  text-decoration: none;
+  font-size: 30px;
+  padding: 20px 0px 20px 0px;
+  width: 50vw;
+  display: block;
+}
+
+nav .active {
+  background: lightgray;
+  cursor: default;
+}
+
+.gauge {
+  position: relative;
+  width: 500px;
+  height: 600px;
+}
+
+.gauge-cursor {
+  position: relative;
+  top: 110px;
+  left: 180px;
+  width: 0;
+  height: 0;
+  border: 30px solid transparent;
+  border-top: 0;
+  border-bottom: 100px solid black;
+  transform-origin: 30px 100px;
+}
+
+.gauge-indicator {
+  position: relative;
+  top: 250px;
+  left: 0px;
+  font-size: 50px;
+}
+
+.gauge-gradient {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+}
+
+.gauge-inner {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: white;
+}
+
+.gauge-bg {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  border: 40px solid;
+  border-color: lightgray lightgray transparent lightgray ;
+}
+
+.gauge-buttons {
+  position: absolute;
+  top: 500px;
+  left: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 500px;
+  align-items: center;
+}
+
+.gauge-buttons > button {
+  padding: 15px 40px;
+  background: black;
+  font-size: 30px;
+  color: white;
+  border: none;
+  cursor: pointer
+}
+
+.gauge-buttons > button:disabled {
+  background: lightgray;
+  cursor: default;
+}
+
+
+.login-page {
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 20px;
+}
+
+.login-page form {
+  border: 2px solid black;
+  width: 300px;
+  min-height: 300px;
+  padding: 50px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.login-page .section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-page input {
+  font-size: 20px;
+  border: 2px solid black;
+  padding: 10px;
+}
+
+.login-page .error {
+  font-size: 15px;
+  color: red;
+}
+
+.login-page button {
+  width: 300px;
+  margin-top: 20px;
+  background: black;
+  color: white;
+  padding: 10px 12px;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
